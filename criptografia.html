@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entenda como a criptografia protege seus dados no mundo digital - dos algoritmos clássicos às soluções modernas">
+    <meta name="keywords" content="criptografia, segurança, algoritmos, criptografia moderna, RSA, AES">
+    <meta name="author" content="TechSec Blog">
+    <title>Criptografia Moderna: Protegendo Dados na Era Digital | TechSec Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>TechSec Blog</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#artigos" class="active">Artigos</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Article Header -->
+    <article class="article-page">
+        <div class="article-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html"><i class="fas fa-home"></i> Início</a>
+                    <span>/</span>
+                    <span>Artigo</span>
+                </div>
+                <h1 class="article-main-title">Criptografia Moderna: Protegendo Dados na Era Digital</h1>
+                <div class="article-meta-header">
+                    <div class="meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>10 de Fevereiro, 2026</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>12 min de leitura</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-tag"></i>
+                        <span>Criptografia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Share Buttons -->
+        <div class="share-sidebar">
+            <button class="share-btn" onclick="shareArticle('twitter')" title="Compartilhar no Twitter">
+                <i class="fab fa-twitter"></i>
+            </button>
+            <button class="share-btn" onclick="shareArticle('linkedin')" title="Compartilhar no LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </button>
+            <button class="share-btn" onclick="shareArticle('facebook')" title="Compartilhar no Facebook">
+                <i class="fab fa-facebook"></i>
+            </button>
+            <button class="share-btn" onclick="shareArticle('whatsapp')" title="Compartilhar no WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </button>
+            <button class="share-btn" onclick="copyLink()" title="Copiar link">
+                <i class="fas fa-link"></i>
+            </button>
+        </div>
+
+        <!-- Article Content -->
+        <div class="container">
+            <div class="article-content">
+                <!-- Resumo -->
+                <div class="article-abstract">
+                    <h3>Resumo</h3>
+                    <p>Este artigo explora os fundamentos da criptografia moderna, desde os conceitos básicos até as implementações atuais que protegem nossas comunicações digitais. Abordamos algoritmos simétricos e assimétricos, certificados digitais, e o papel crucial da criptografia na privacidade e segurança online.</p>
+                    <p><strong>Palavras-chave:</strong> Criptografia, Algoritmos, RSA, AES, Chave Pública, Segurança Digital</p>
+                </div>
+
+                <!-- Introdução -->
+                <section class="article-section">
+                    <h2>1. A Magia dos Códigos Secretos</h2>
+                    <p>Você já parou para pensar que toda vez que você faz uma compra online, envia uma mensagem pelo WhatsApp ou acessa seu banco, existe uma camada invisível de proteção trabalhando nos bastidores? Essa "magia" tem um nome: criptografia. E não, não é coisa de filme de espião – é tecnologia que usamos todo dia, mesmo sem perceber.</p>
+                    
+                    <p>Confesso que quando comecei a estudar criptografia, achei que seria algo super complicado, cheio de fórmulas matemáticas impossíveis. E bem... tem sim muita matemática por trás, mas o conceito básico é surpreendentemente simples: pegar uma informação legível e transformá-la em algo que parece totalmente aleatório, de um jeito que só quem tem a "chave certa" consegue destransformar.</p>
+                    
+                    <p>Pensa numa carta cifrada daquelas que a gente fazia quando era criança, trocando cada letra por outra. A criptografia moderna é basicamente isso, só que infinitamente mais sofisticada e praticamente impossível de quebrar sem a chave correta.</p>
+                </section>
+
+                <!-- História -->
+                <section class="article-section">
+                    <h2>2. De Júlio César aos Dias Atuais</h2>
+                    <p>A história da criptografia é fascinante. Lá por 50 a.C., Júlio César já usava uma cifra simples para proteger suas mensagens militares – ele simplesmente deslocava cada letra do alfabeto três posições à frente. Tipo, A virava D, B virava E, e assim por diante. Meio óbvio para os padrões de hoje, mas na época funcionava.</p>
+                    
+                    <p>Durante a Segunda Guerra Mundial, a coisa ficou séria com a máquina Enigma dos alemães. Era um equipamento que parecia uma máquina de escrever, mas que criava códigos super complexos. Os aliados gastaram anos tentando quebrá-la, até que um time liderado por Alan Turing (sim, aquele dos filmes) conseguiu decifrar. Dizem que isso encurtou a guerra em anos.</p>
+                    
+                    <div class="info-box">
+                        <i class="fas fa-lightbulb"></i>
+                        <p><strong>Curiosidade:</strong> Alan Turing é considerado o pai da computação moderna. Ironicamente, ele criou as bases para os computadores que hoje executam algoritmos de criptografia milhões de vezes mais complexos que a Enigma.</p>
+                    </div>
+                    
+                    <p>Hoje em dia, a criptografia evoluiu tanto que até mesmo os supercomputadores mais potentes do mundo levariam milhares de anos para quebrar uma criptografia moderna de 256 bits. É matemática pura trabalhando a nosso favor.</p>
+                </section>
+
+                <!-- Conceitos Básicos -->
+                <section class="article-section">
+                    <h2>3. Entendendo o Básico: Simétrica vs Assimétrica</h2>
+                    
+                    <h3>3.1 Criptografia Simétrica: A Mesma Chave para Tudo</h3>
+                    <p>Imagina que você e seu melhor amigo compartilham a senha de um cofre. Qualquer um dos dois pode abrir e fechar usando a mesma senha. Isso é criptografia simétrica – usa a mesma chave para criptografar e descriptografar.</p>
+                    
+                    <p>O algoritmo mais famoso desse tipo é o AES (Advanced Encryption Standard). Ele é usado em praticamente tudo: WiFi, VPNs, criptografia de disco, aplicativos... É rápido, eficiente e extremamente seguro quando bem implementado.</p>
+                    
+                    <p>O problema? Como você compartilha essa chave secreta com alguém de forma segura pela internet? Se alguém interceptar a chave durante a transmissão, game over. Foi aí que inventaram algo genial...</p>
+                    
+                    <h3>3.2 Criptografia Assimétrica: O Truque das Duas Chaves</h3>
+                    <p>Aqui é onde a coisa fica interessante. Na criptografia assimétrica, você tem um par de chaves: uma pública (que todo mundo pode saber) e uma privada (que só você conhece).</p>
+                    
+                    <p>Funciona assim: eu criptografo uma mensagem com a sua chave pública. Depois disso, só a sua chave privada consegue descriptografar. É tipo uma caixa de correio – qualquer um pode colocar carta dentro (com a chave pública), mas só você pode abrir e ler (com a chave privada).</p>
+                    
+                    <p>O RSA é o algoritmo assimétrico mais conhecido. Ele usa propriedades matemáticas de números primos gigantes. E quando digo gigantes, estou falando de números com centenas de dígitos. É praticamente impossível fatorar esses números para descobrir a chave privada.</p>
+                    
+                    <div class="highlight-box">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p><strong>Detalhe importante:</strong> Criptografia assimétrica é muito mais lenta que simétrica. Por isso, na prática, os sistemas costumam usar as duas: assimétrica para trocar uma chave simétrica de forma segura, e depois simétrica para a comunicação real. Melhor dos dois mundos!</p>
+                    </div>
+                </section>
+
+                <!-- Aplicações Práticas -->
+                <section class="article-section">
+                    <h2>4. Onde a Criptografia Está Salvando Você Agora</h2>
+                    
+                    <h3>4.1 HTTPS: Aquele Cadeadinho no Navegador</h3>
+                    <p>Sabe quando você entra num site e aparece um cadeado verde (ou cinza) na barra de endereços? Isso significa que a conexão está usando HTTPS – o "S" é de "Secure", protegido por criptografia.</p>
+                    
+                    <p>Quando você acessa um site HTTPS, seu navegador e o servidor fazem uma "negociação" rápida (chamada de handshake SSL/TLS) para estabelecer uma conexão criptografada. Daí pra frente, tudo que você envia e recebe é embaralhado de um jeito que só você e o servidor conseguem entender.</p>
+                    
+                    <p>Isso é crucial especialmente quando você está usando WiFi público. Sem HTTPS, qualquer um na mesma rede poderia "farejar" seus dados em texto puro. Com HTTPS, mesmo que alguém intercepte, só vai ver um monte de caracteres aleatórios.</p>
+                    
+                    <h3>4.2 Mensagens: WhatsApp e a Criptografia de Ponta a Ponta</h3>
+                    <p>O WhatsApp popularizou algo chamado "criptografia de ponta a ponta" (end-to-end encryption). O que isso significa na prática? Que suas mensagens são criptografadas no seu celular e só descriptografadas no celular de quem recebe.</p>
+                    
+                    <p>Nem os servidores do WhatsApp conseguem ler suas mensagens. Nem a própria empresa. Nem o governo (embora muitos governos não gostem disso). Nem hackers que invadam os servidores. É só você e a pessoa com quem você está conversando.</p>
+                    
+                    <p>Outros apps como Signal e Telegram também usam essa tecnologia. O protocolo mais usado se chama Signal Protocol, e é considerado padrão-ouro em termos de privacidade.</p>
+                    
+                    <h3>4.3 Senhas: Por Que Elas Não São Guardadas de Verdade</h3>
+                    <p>Aqui vai uma informação que muita gente não sabe: sites e aplicativos sérios NÃO guardam sua senha de verdade. Eles guardam algo chamado "hash".</p>
+                    
+                    <p>Hash é tipo uma impressão digital da sua senha. É um processo de mão única – você consegue gerar o hash a partir da senha, mas não consegue voltar do hash para a senha. Quando você faz login, o sistema pega a senha que você digitou, gera o hash dela, e compara com o hash armazenado.</p>
+                    
+                    <p>Por isso, quando você esquece sua senha, o site não pode "te enviar sua senha". Eles nem sabem qual é! Só podem deixar você criar uma nova.</p>
+                </section>
+
+                <!-- Desafios Atuais -->
+                <section class="article-section">
+                    <h2>5. O Fantasma da Computação Quântica</h2>
+                    <p>Agora vem a parte que tira o sono dos especialistas em segurança: computadores quânticos. Eles têm o potencial de quebrar a maioria dos algoritmos de criptografia que usamos hoje, especialmente os assimétricos como RSA.</p>
+                    
+                    <p>A matemática por trás é complexa, mas basicamente: computadores quânticos conseguem fazer certos tipos de cálculos absurdamente mais rápido que computadores tradicionais. Aquele problema de fatorar números primos gigantes, que levaria milhares de anos num computador normal? Um computador quântico suficientemente poderoso poderia resolver em horas ou dias.</p>
+                    
+                    <p>A boa notícia? A computação quântica ainda está engatinhando. A má notícia? Quando ela amadurecer, vai ser um caos. Imagine todas as comunicações secretas de governos e empresas dos últimos anos sendo descriptografadas de uma vez.</p>
+                    
+                    <div class="warning-box">
+                        <i class="fas fa-shield-virus"></i>
+                        <p><strong>Já estão se preparando:</strong> Cientistas já trabalham em "criptografia pós-quântica" – algoritmos que seriam seguros mesmo contra computadores quânticos. O NIST (Instituto Nacional de Padrões e Tecnologia dos EUA) está em processo de padronizar esses novos algoritmos.</p>
+                    </div>
+                </section>
+
+                <!-- Práticas Recomendadas -->
+                <section class="article-section">
+                    <h2>6. Como Aproveitar a Criptografia no Dia a Dia</h2>
+                    <p>Ok, chega de teoria. O que você pode fazer HOJE para usar criptografia a seu favor?</p>
+                    
+                    <p><strong>1. Use HTTPS sempre que possível.</strong> Instale extensões como HTTPS Everywhere que forçam conexões seguras. Desconfie de sites que não usam HTTPS, especialmente se você vai inserir dados sensíveis.</p>
+                    
+                    <p><strong>2. Criptografe seus backups e dispositivos.</strong> Todos os sistemas operacionais modernos oferecem criptografia de disco. No Windows é o BitLocker, no Mac é o FileVault, no Linux tem várias opções. Ative isso!</p>
+                    
+                    <p><strong>3. Use mensageiros com criptografia de ponta a ponta.</strong> Signal é o mais recomendado por especialistas em privacidade. WhatsApp também é bom nesse aspecto, apesar das polêmicas sobre compartilhamento de metadados.</p>
+                    
+                    <p><strong>4. Considere usar uma VPN confiável.</strong> Especialmente em WiFi público. Uma boa VPN criptografa todo o seu tráfego de internet, não só páginas web.</p>
+                    
+                    <p><strong>5. Para e-mails super sensíveis, considere PGP.</strong> É complicado de configurar, admito, mas oferece criptografia de ponta a ponta para e-mails. Jornalistas e ativistas usam muito.</p>
+                </section>
+
+                <!-- Conclusão -->
+                <section class="article-section">
+                    <h2>7. Pensamentos Finais</h2>
+                    <p>A criptografia é uma daquelas tecnologias que funciona melhor quando você nem percebe que está lá. Ela está nos protegendo silenciosamente, 24/7, em praticamente tudo que fazemos online.</p>
+                    
+                    <p>É fascinante pensar que estamos usando matemática desenvolvida ao longo de séculos para proteger nossos segredos digitais. E ao mesmo tempo, é um lembrete de que a batalha entre quem quer proteger informação e quem quer quebrá-la nunca termina.</p>
+                    
+                    <p>A criptografia moderna nos dá uma chance real de privacidade em um mundo cada vez mais conectado. Mas ela só funciona se for usada corretamente e se as chaves forem mantidas em segredo. Como dizem por aí: a corrente é tão forte quanto seu elo mais fraco.</p>
+                    
+                    <p>Então da próxima vez que você vir aquele cadeadinho no navegador, dê um sorriso interno. Tem muita ciência e engenharia trabalhando ali para manter seus dados seguros. E vale a pena entender pelo menos o básico de como isso funciona – afinal, conhecimento é poder, especialmente quando se trata de sua própria segurança.</p>
+                </section>
+
+                <!-- Author Info -->
+                <div class="author-info">
+                    <div class="author-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="author-details">
+                        <h4>Sobre o Autor</h4>
+                        <p>Artigo desenvolvido para fins educacionais sobre criptografia e suas aplicações práticas no mundo digital moderno.</p>
+                        <p style="margin-top: 1rem;"><strong>Contato:</strong> <a href="mailto:danielebertelliprado@gmail.com">danielebertelliprado@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Related Articles -->
+                <div class="related-articles">
+                    <h3>Artigos Relacionados</h3>
+                    <div class="related-grid">
+                        <div class="related-card" onclick="window.location.href='artigo.html'">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Segurança da Informação</h4>
+                            <p>Desafios e perspectivas na era digital</p>
+                        </div>
+                        <div class="related-card" onclick="window.location.href='privacidade.html'">
+                            <i class="fas fa-user-shield"></i>
+                            <h4>Privacidade Online</h4>
+                            <p>Como proteger sua identidade digital</p>
+                        </div>
+                        <div class="related-card" onclick="window.location.href='lgpd.html'">
+                            <i class="fas fa-balance-scale"></i>
+                            <h4>LGPD na Prática</h4>
+                            <p>Guia completo para empresas e indivíduos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-shield-alt"></i> TechSec Blog</h3>
+                    <p>Compartilhando conhecimento sobre segurança da informação e tecnologia desde 2026.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html#sobre">Sobre</a></li>
+                        <li><a href="index.html#artigos">Artigos</a></li>
+                        <li><a href="index.html#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categorias</h4>
+                    <ul>
+                        <li><a href="#">Segurança</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                        <li><a href="#">Criptografia</a></li>
+                        <li><a href="#">LGPD</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TechSec Blog. Todos os direitos reservados. | Contato: <a href="mailto:danielebertelliprado@gmail.com" style="color: #94a3b8;">danielebertelliprado@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guia prático sobre LGPD - Lei Geral de Proteção de Dados no Brasil. Direitos, deveres e como se adequar">
+    <meta name="keywords" content="LGPD, proteção de dados, lei brasileira, ANPD, compliance, privacidade">
+    <meta name="author" content="TechSec Blog">
+    <title>LGPD na Prática: Guia Completo da Lei Brasileira | TechSec Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>TechSec Blog</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#artigos" class="active">Artigos</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Article Header -->
+    <article class="article-page">
+        <div class="article-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html"><i class="fas fa-home"></i> Início</a>
+                    <span>/</span>
+                    <span>Artigo</span>
+                </div>
+                <h1 class="article-main-title">LGPD na Prática: Guia Completo da Lei Brasileira de Proteção de Dados</h1>
+                <div class="article-meta-header">
+                    <div class="meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>08 de Fevereiro, 2026</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>16 min de leitura</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-tag"></i>
+                        <span>LGPD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Share Buttons -->
+        <div class="share-sidebar">
+            <button class="share-btn" onclick="shareArticle('twitter')" title="Compartilhar no Twitter">
+                <i class="fab fa-twitter"></i>
+            </button>
+            <button class="share-btn" onclick="shareArticle('linkedin')" title="Compartilhar no LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </button>
+            <button class="share-btn" onclick="shareArticle('facebook')" title="Compartilhar no Facebook">
+                <i class="fab fa-facebook"></i>
+            </button>
+            <button class="share-btn" onclick="shareArticle('whatsapp')" title="Compartilhar no WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </button>
+            <button class="share-btn" onclick="copyLink()" title="Copiar link">
+                <i class="fas fa-link"></i>
+            </button>
+        </div>
+
+        <!-- Article Content -->
+        <div class="container">
+            <div class="article-content">
+                <!-- Resumo -->
+                <div class="article-abstract">
+                    <h3>Resumo</h3>
+                    <p>Este artigo oferece um guia prático sobre a Lei Geral de Proteção de Dados (LGPD) brasileira. Exploramos os direitos dos titulares de dados, obrigações das empresas, bases legais para tratamento de dados, e como implementar conformidade na prática.</p>
+                    <p><strong>Palavras-chave:</strong> LGPD, Proteção de Dados, ANPD, Compliance, DPO, Privacidade, Lei 13.709/2018</p>
+                </div>
+
+                <!-- Introdução -->
+                <section class="article-section">
+                    <h2>1. A Lei que Mudou a Relação com Nossos Dados</h2>
+                    <p>Setembro de 2020 foi um marco na história digital brasileira. Foi quando entrou em vigor a Lei Geral de Proteção de Dados – a famosa LGPD. E desde então, a gente vê aquelas caixinhas chatas de cookies em todo site, recebe emails perguntando se queremos continuar recebendo newsletter, e empresas correndo para se adequar.</p>
+                    
+                    <p>Mas o que muita gente não percebe é que a LGPD não é só sobre essas coisinhas irritantes. Ela representa uma mudança fundamental: seus dados pessoais agora são, de fato, SEUS. Empresas não podem mais fazer o que quiserem com suas informações. Precisam te avisar, pedir permissão, e te dar controle.</p>
+                    
+                    <p>É tipo a diferença entre alguém entrando na sua casa sem avisar versus ter que tocar a campainha e esperar você abrir a porta. Seus dados viraram sua "propriedade virtual", e a lei finalmente reconhece isso.</p>
+                    
+                    <div class="info-box">
+                        <i class="fas fa-lightbulb"></i>
+                        <p><strong>Contexto importante:</strong> A LGPD foi inspirada na GDPR europeia, mas tem suas particularidades brasileiras. Foi sancionada em 2018, mas só entrou em vigor em 2020, e as multas começaram a valer em agosto de 2021.</p>
+                    </div>
+                </section>
+
+                <!-- Conceitos Fundamentais -->
+                <section class="article-section">
+                    <h2>2. Entendendo o Básico: Quem é Quem na LGPD</h2>
+                    
+                    <h3>2.1 Dado Pessoal vs Dado Sensível</h3>
+                    <p><strong>Dado pessoal</strong> é qualquer informação que identifica ou pode identificar uma pessoa. Nome, CPF, email, endereço, IP do computador, até cookie do navegador. Se dá para ligar aquilo a uma pessoa específica, é dado pessoal.</p>
+                    
+                    <p><strong>Dado sensível</strong> é uma categoria especial que merece proteção extra: origem racial/étnica, convicção religiosa, opinião política, filiação sindical, dados de saúde, vida sexual, dado genético ou biométrico. Basicamente, informações que podem gerar discriminação ou são extremamente íntimas.</p>
+                    
+                    <p>Por que a distinção importa? Porque para tratar dados sensíveis, as empresas precisam de bases legais ainda mais restritas. Não dá para usar "legítimo interesse" com dado sensível, por exemplo.</p>
+                    
+                    <h3>2.2 Os Personagens da História</h3>
+                    <p><strong>Titular:</strong> Você. A pessoa dona dos dados. Quem tem os direitos.</p>
+                    
+                    <p><strong>Controlador:</strong> A empresa/organização que decide O QUE fazer com os dados e POR QUÊ. Tipo, uma loja online decide coletar seu endereço para entregar produtos.</p>
+                    
+                    <p><strong>Operador:</strong> Quem processa os dados seguindo instruções do controlador. Tipo, a empresa de logística que recebe seu endereço da loja para fazer a entrega.</p>
+                    
+                    <p><strong>Encarregado (DPO):</strong> A pessoa responsável por cuidar da proteção de dados na empresa. É tipo o "advogado dos dados". É quem você procura quando tem dúvidas ou quer exercer seus direitos.</p>
+                    
+                    <p><strong>ANPD:</strong> Autoridade Nacional de Proteção de Dados. O órgão do governo que fiscaliza, pune e orienta sobre LGPD. É tipo a Receita Federal, mas para dados pessoais.</p>
+                </section>
+
+                <!-- Direitos dos Titulares -->
+                <section class="article-section">
+                    <h2>3. Seus Direitos: O Que Você Pode Exigir</h2>
+                    <p>A LGPD te dá uma lista bem generosa de direitos. E não são só palavras no papel – empresas são obrigadas por lei a respeitar. Vamos aos principais:</p>
+                    
+                    <h3>3.1 Direito de Confirmação e Acesso</h3>
+                    <p>Você pode perguntar para qualquer empresa: "vocês têm dados meus?" E eles são obrigados a responder. Se tiverem, você pode pedir uma cópia de TODOS os dados que têm sobre você.</p>
+                    
+                    <p>Já fiz isso com algumas empresas por curiosidade. Algumas responderam super rápido com relatórios organizados. Outras... digamos que ainda estão "se adequando" (eufemismo para não estarem preparadas).</p>
+                    
+                    <h3>3.2 Direito de Correção</h3>
+                    <p>Se os dados estiverem errados, você pode exigir correção. Simples assim. Seu nome está escrito errado no cadastro? Peça para corrigir. Data de nascimento errada? Idem.</p>
+                    
+                    <h3>3.3 Direito ao Esquecimento (Eliminação)</h3>
+                    <p>Este é polêmico. Você pode pedir para uma empresa deletar seus dados quando eles não forem mais necessários ou se você retirar o consentimento.</p>
+                    
+                    <p>Mas... tem exceções. A empresa não precisa deletar se tiver obrigação legal de guardar (tipo, notas fiscais precisam ser mantidas por 5 anos para a Receita). Ou se os dados forem necessários para exercício de direitos (tipo, em um processo judicial).</p>
+                    
+                    <div class="highlight-box">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p><strong>Importante:</strong> Direito ao esquecimento não significa que você pode apagar coisas embaraçosas que postou nas redes sociais. Isso é diferente – é sobre dados que empresas coletaram SOBRE você, não dados que você mesmo publicou.</p>
+                    </div>
+                    
+                    <h3>3.4 Direito à Portabilidade</h3>
+                    <p>Você pode pedir seus dados em formato estruturado e legível por máquina, para migrar para outro fornecedor. Tipo, sair do Gmail e levar todos seus emails para outro serviço.</p>
+                    
+                    <p>Na teoria é lindo. Na prática? Ainda não está funcionando super bem. Muitas empresas ainda não implementaram isso direito. Mas está melhorando.</p>
+                    
+                    <h3>3.5 Direito de Não Ser Perfilado</h3>
+                    <p>Decisões automatizadas que te afetam significativamente não podem ser baseadas só em algoritmos. Você tem direito a revisão humana.</p>
+                    
+                    <p>Exemplo: se um banco nega seu empréstimo baseado só em um algoritmo, você pode pedir que um humano revise. Se uma empresa te exclui de uma promoção porque o sistema te classificou errado, você pode contestar.</p>
+                </section>
+
+                <!-- Bases Legais -->
+                <section class="article-section">
+                    <h2>4. Bases Legais: Quando uma Empresa PODE Usar Seus Dados</h2>
+                    <p>Ok, então empresas não podem fazer o que quiserem com dados. Mas também não podem simplesmente não coletar nada – seria impossível operar. A LGPD lista 10 "bases legais" que justificam o tratamento de dados. São tipo as "licenças" para usar informações pessoais.</p>
+                    
+                    <h3>4.1 Consentimento</h3>
+                    <p>A mais óbvia: você autoriza explicitamente. Aquelas caixinhas que você marca dizendo "aceito". Mas tem que ser consentimento de verdade – livre, informado, inequívoco. Não pode estar escondido em termos de 50 páginas que ninguém lê.</p>
+                    
+                    <p>E você pode retirar o consentimento quando quiser. A empresa tem que deixar isso fácil – tão fácil quanto foi dar o consentimento.</p>
+                    
+                    <h3>4.2 Cumprimento de Obrigação Legal</h3>
+                    <p>Se a lei obriga a empresa a coletar, ela pode. Tipo, empresas precisam guardar dados fiscais. Hospitais precisam manter prontuários médicos. Não precisa do seu consentimento porque é obrigação legal deles.</p>
+                    
+                    <h3>4.3 Execução de Contrato</h3>
+                    <p>Se você comprou algo, a empresa pode usar seus dados para cumprir o contrato. Tipo, usar seu endereço para enviar o produto. Usar seu email para mandar confirmação de pedido. Faz sentido, né?</p>
+                    
+                    <h3>4.4 Legítimo Interesse</h3>
+                    <p>Essa é a mais polêmica e mais usada. A empresa pode tratar dados se tiver um interesse legítimo, desde que não viole seus direitos e liberdades.</p>
+                    
+                    <p>Exemplo de uso legítimo: prevenção de fraudes, segurança da rede, marketing direcionado (mas não invasivo). A empresa precisa fazer um "teste de balanceamento" – o interesse dela é mais importante que sua privacidade naquele caso específico?</p>
+                    
+                    <p>É subjetivo, e gera muita discussão. Muitas empresas abusam dessa base legal, e a ANPD está de olho.</p>
+                    
+                    <div class="warning-box">
+                        <i class="fas fa-shield-virus"></i>
+                        <p><strong>Atenção empresas:</strong> Legítimo interesse NÃO é um coringa para fazer o que quiser. Precisa documentar, justificar e estar preparado para explicar se for questionado. E NÃO pode usar para dados sensíveis!</p>
+                    </div>
+                </section>
+
+                <!-- Para Empresas -->
+                <section class="article-section">
+                    <h2>5. Para Empresas: Como Se Adequar à LGPD</h2>
+                    
+                    <h3>5.1 Mapeamento de Dados</h3>
+                    <p>Primeiro passo: descobrir QUE dados você coleta, ONDE estão armazenados, COMO são usados, QUEM tem acesso, e POR QUANTO TEMPO são guardados.</p>
+                    
+                    <p>Parece simples, mas para empresas maiores é um projeto gigante. Tem dados em sistemas legados, planilhas espalhadas, emails, backups antigos... É tipo fazer faxina em casa e encontrar coisas que você nem lembrava que tinha.</p>
+                    
+                    <h3>5.2 Políticas e Procedimentos</h3>
+                    <p>Precisa documentar tudo. Criar uma Política de Privacidade clara (sem juridiquês impossível). Definir processos para atender pedidos de titulares. Treinar funcionários.</p>
+                    
+                    <p>E não adianta só escrever documento bonito e deixar na gaveta. Precisa ser implementado de verdade. A ANPD pode pedir evidências de que você realmente segue o que documentou.</p>
+                    
+                    <h3>5.3 Nomeação do Encarregado (DPO)</h3>
+                    <p>Obrigatório ter um encarregado de proteção de dados. O contato dele precisa estar público. Ele é a ponte entre a empresa, os titulares de dados e a ANPD.</p>
+                    
+                    <p>Pode ser funcionário ou contratado externo. Pode acumular outras funções (em empresas pequenas). Mas precisa ter autonomia e conhecimento técnico-jurídico sobre proteção de dados.</p>
+                    
+                    <h3>5.4 Segurança da Informação</h3>
+                    <p>A LGPD exige medidas de segurança técnicas e administrativas para proteger dados. Não especifica quais, mas fala em "estado da arte" – ou seja, usar as melhores práticas disponíveis.</p>
+                    
+                    <p>Inclui: criptografia, controle de acesso, backups, firewall, antivírus, gestão de vulnerabilidades... E também coisas como contratar funcionários de forma segura, treinar equipe, ter plano de resposta a incidentes.</p>
+                    
+                    <h3>5.5 Relatório de Impacto (RIPD)</h3>
+                    <p>Para tratamentos de alto risco (tipo, processamento de dados sensíveis em larga escala, decisões automatizadas importantes), precisa fazer um relatório analisando os riscos e as medidas de mitigação.</p>
+                    
+                    <p>É tipo um estudo de impacto ambiental, mas para privacidade. A ANPD pode pedir para ver.</p>
+                </section>
+
+                <!-- Penalidades -->
+                <section class="article-section">
+                    <h2>6. E Se Não Cumprir? As Multas da LGPD</h2>
+                    <p>Ok, chegou a parte que faz empresas levarem a sério: as sanções. A ANPD pode aplicar várias penalidades, dependendo da gravidade da infração:</p>
+                    
+                    <p><strong>1. Advertência:</strong> Para infrações leves ou primeira vez. É tipo um "cartão amarelo".</p>
+                    
+                    <p><strong>2. Multa simples:</strong> Até 2% do faturamento da empresa no Brasil, limitada a R$ 50 milhões por infração. Sim, milhões!</p>
+                    
+                    <p><strong>3. Multa diária:</strong> Para quando a empresa não corrige o problema. Pode somar rápido.</p>
+                    
+                    <p><strong>4. Publicização da infração:</strong> A ANPD divulga publicamente que a empresa infringiu a lei. Péssimo para a reputação.</p>
+                    
+                    <p><strong>5. Bloqueio ou eliminação de dados:</strong> Em casos graves, a ANPD pode ordenar a destruição dos dados coletados ilegalmente.</p>
+                    
+                    <p><strong>6. Suspensão do banco de dados:</strong> Parcial ou total. É tipo fechar a operação da empresa.</p>
+                    
+                    <div class="case-box">
+                        <i class="fas fa-file-medical-alt"></i>
+                        <p><strong>Exemplos reais:</strong> Até 2026, a ANPD já aplicou diversas sanções. Instagram levou multa de R$ 3 milhões por tratamento irregular de dados de crianças. Claro S.A. foi multada em R$ 900 mil por falhas no atendimento de direitos dos titulares. As multas estão ficando mais pesadas com o tempo.</p>
+                    </div>
+                </section>
+
+                <!-- Casos Práticos -->
+                <section class="article-section">
+                    <h2>7. Situações do Dia a Dia</h2>
+                    
+                    <h3>7.1 Pequenas Empresas e Profissionais Liberais</h3>
+                    <p>Tem uma confusão comum: "meu negócio é pequeno, LGPD não se aplica". ERRADO! Se você coleta dados de clientes, sim, se aplica. Desde um consultório médico até aquela lojinha online.</p>
+                    
+                    <p>A boa notícia? A ANPD prometeu tratamento diferenciado para micro e pequenas empresas. Multas menores, mais orientação, prazos mais elásticos. Mas ainda precisa estar em conformidade básica.</p>
+                    
+                    <h3>7.2 Escolas e Dados de Crianças</h3>
+                    <p>Dados de crianças e adolescentes têm proteção especial. Precisa do consentimento dos pais/responsáveis (para menores de 18). E só pode coletar o mínimo necessário.</p>
+                    
+                    <p>Escolas podem tratar dados de alunos sem consentimento dos pais? Depende. Para atividades educacionais essenciais, sim (base legal: execução de contrato ou legítimo interesse). Mas para coisas extras, tipo compartilhar fotos em redes sociais, precisa de autorização.</p>
+                    
+                    <h3>7.3 Transferência Internacional</h3>
+                    <p>Empresas brasileiras podem enviar dados para fora do país? Sim, mas com condições. O país destino precisa ter nível de proteção adequado, ou a empresa precisa ter cláusulas contratuais específicas garantindo a proteção.</p>
+                    
+                    <p>EUA, por exemplo, não tem lei federal de proteção de dados. Então transferir dados para lá exige cuidados extras. Europa, que tem a GDPR, é considerada adequada.</p>
+                </section>
+
+                <!-- Futuro -->
+                <section class="article-section">
+                    <h2>8. O Futuro da LGPD</h2>
+                    <p>A LGPD ainda é relativamente nova. Está em constante evolução. A ANPD publica guias, orientações, regulamentações complementares regularmente.</p>
+                    
+                    <p>Algumas tendências que estamos vendo:</p>
+                    
+                    <p><strong>1. Fiscalização mais rigorosa:</strong> Os primeiros anos foram mais educativos. Agora as multas estão ficando mais pesadas e frequentes.</p>
+                    
+                    <p><strong>2. Foco em setores específicos:</strong> Saúde, educação, financeiro – setores que lidam com dados sensíveis estão sendo priorizados nas fiscalizações.</p>
+                    
+                    <p><strong>3. Transparência algorítmica:</strong> Crescente pressão para que empresas expliquem como algoritmos de IA tomam decisões sobre pessoas.</p>
+                    
+                    <p><strong>4. Privacidade desde a concepção:</strong> Não basta se adequar depois. Novos produtos e serviços já devem nascer em conformidade (privacy by design).</p>
+                    
+                    <p><strong>5. Certificações e selos:</strong> Provavelmente teremos programas de certificação de conformidade, que empresas podem exibir para ganhar confiança do público.</p>
+                </section>
+
+                <!-- Conclusão -->
+                <section class="article-section">
+                    <h2>9. Conclusão: LGPD Como Oportunidade</h2>
+                    <p>Sei que para muitas empresas, especialmente as menores, a LGPD parece uma dor de cabeça burocrática. Mais uma regulação governamental complicando a vida. Mas eu gosto de pensar na LGPD como uma oportunidade.</p>
+                    
+                    <p>Oportunidade para as empresas repensarem como tratam dados, eliminarem excessos, melhorarem segurança. Empresas que levam privacidade a sério ganham vantagem competitiva – consumidores cada vez mais valorizam isso.</p>
+                    
+                    <p>E para nós, cidadãos, é uma vitória. Pela primeira vez temos instrumentos legais reais para controlar nossas informações pessoais. Não é perfeito, está longe disso. A fiscalização ainda precisa melhorar, muitas empresas ainda não se adequaram direito, e exercer seus direitos ainda pode ser complicado.</p>
+                    
+                    <p>Mas é um começo. E cada vez que você exerce seus direitos, cada vez que uma empresa é multada por descumprir a lei, cada vez que alguém pensa duas vezes antes de compartilhar dados desnecessários, estamos construindo uma cultura de privacidade mais saudável.</p>
+                    
+                    <p>Então sim, leia aquelas políticas de privacidade (ou pelo menos dê uma olhada). Questione quando pedirem dados que parecem desnecessários. Exercite seus direitos. E se for empresário, veja a LGPD não como obstáculo, mas como investimento em confiança.</p>
+                    
+                    <p>No fim das contas, dados são o petróleo do século XXI. E a LGPD é nossa maneira de garantir que esse petróleo não seja extraído e usado de qualquer jeito, sem nosso conhecimento ou controle.</p>
+                </section>
+
+                <!-- Author Info -->
+                <div class="author-info">
+                    <div class="author-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="author-details">
+                        <h4>Sobre o Autor</h4>
+                        <p>Artigo desenvolvido para orientação sobre LGPD e seus impactos práticos no Brasil, tanto para empresas quanto para indivíduos.</p>
+                        <p style="margin-top: 1rem;"><strong>Contato:</strong> <a href="mailto:danielebertelliprado@gmail.com">danielebertelliprado@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Related Articles -->
+                <div class="related-articles">
+                    <h3>Artigos Relacionados</h3>
+                    <div class="related-grid">
+                        <div class="related-card" onclick="window.location.href='artigo.html'">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Segurança da Informação</h4>
+                            <p>Desafios e perspectivas na era digital</p>
+                        </div>
+                        <div class="related-card" onclick="window.location.href='criptografia.html'">
+                            <i class="fas fa-lock"></i>
+                            <h4>Criptografia Moderna</h4>
+                            <p>Entendendo os algoritmos que protegem seus dados</p>
+                        </div>
+                        <div class="related-card" onclick="window.location.href='privacidade.html'">
+                            <i class="fas fa-user-shield"></i>
+                            <h4>Privacidade Online</h4>
+                            <p>Como proteger sua identidade digital</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-shield-alt"></i> TechSec Blog</h3>
+                    <p>Compartilhando conhecimento sobre segurança da informação e tecnologia desde 2026.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html#sobre">Sobre</a></li>
+                        <li><a href="index.html#artigos">Artigos</a></li>
+                        <li><a href="index.html#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categorias</h4>
+                    <ul>
+                        <li><a href="#">Segurança</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                        <li><a href="#">Criptografia</a></li>
+                        <li><a href="#">LGPD</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TechSec Blog. Todos os direitos reservados. | Contato: <a href="mailto:danielebertelliprado@gmail.com" style="color: #94a3b8;">danielebertelliprado@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
